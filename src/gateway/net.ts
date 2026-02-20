@@ -303,6 +303,10 @@ export async function resolveGatewayBindHost(
   }
 
   if (mode === "lan") {
+    // Prefer :: so fly proxy (and other IPv6 clients) can connect; fall back to IPv4-only
+    if (await canBindToHost("::")) {
+      return "::";
+    }
     return "0.0.0.0";
   }
 

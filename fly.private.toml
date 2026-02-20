@@ -9,8 +9,8 @@
 #
 # See https://fly.io/docs/reference/configuration/
 
-app = "my-openclaw" # change to your app name
-primary_region = "iad" # change to your closest region
+app = "jordans-openclaw"
+primary_region = "sjc"
 
 [build]
 dockerfile = "Dockerfile"
