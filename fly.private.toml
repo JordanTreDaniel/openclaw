@@ -22,11 +22,11 @@ OPENCLAW_STATE_DIR = "/data"
 NODE_OPTIONS = "--max-old-space-size=1536"
 
 [processes]
-app = "node dist/index.js gateway --allow-unconfigured --port 3000 --bind lan"
+app = "node dist/index.js gateway --allow-unconfigured --port 4545 --bind lan"
 
 # NOTE: No [http_service] block = no public ingress allocated.
 # The gateway will only be accessible via:
-#   - fly proxy 3000:3000 -a <app-name>
+#   - fly proxy 4545:4545 -a <app-name>
 #   - fly wireguard (then access via internal IPv6)
 #   - fly ssh console
 
